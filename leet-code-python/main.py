@@ -1,1 +1,2 @@
 print("wenjian")
+print("test")
