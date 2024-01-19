@@ -1,2 +1,1 @@
-print("wenjian")
-print("test")
+print("fight fight !!")
