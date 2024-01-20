@@ -13,6 +13,7 @@ class Solution:
         def dfs(source):
             colors[source] = 1
             stack = [source]
+
             while stack:
                 # 先不弹出
                 u = stack[-1]
