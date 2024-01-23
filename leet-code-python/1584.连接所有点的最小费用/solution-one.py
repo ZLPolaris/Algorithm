@@ -29,6 +29,7 @@ class UnionFind:
     def isSame(self, node1, node2):
         return self.find(node1) == self.find(node2)
 
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         point_number = len(points)
@@ -37,7 +38,7 @@ class Solution:
             for j in range(i + 1, point_number):
                 edges.append((i, j, abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])))
         edges.sort(key=lambda x: x[2])
-        uf = UnionFind()
+        uf = UnionFind(point_number)
         all_distance = 0
         for edge in edges:
             if not uf.isSame(edge[0], edge[1]):
