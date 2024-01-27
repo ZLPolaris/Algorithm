@@ -27,7 +27,6 @@ class Solution:
                 if minDist > maxDist:
                     maxDist = minDist
                 final[select] = True
-                print(select)
                 for j in range(n):
                     if not final[j] and graph[select][j] != float('inf') and dist[select] + graph[select][j] < dist[j]:
                         dist[j] = dist[select] + graph[select][j]
