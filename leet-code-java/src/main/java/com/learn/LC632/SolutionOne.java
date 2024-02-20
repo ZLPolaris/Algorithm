@@ -1,6 +1,5 @@
 package com.learn.LC632;
 
-
 import java.util.List;
 
 public class SolutionOne {
@@ -20,6 +19,7 @@ public class SolutionOne {
                     minIndex = i;
                 }
             }
+
             int sectionLength = nums.get(maxIndex).get(pointers[maxIndex]) - nums.get(minIndex).get(pointers[minIndex]);
             if(sectionLength < smallest){
                 res[0] = nums.get(minIndex).get(pointers[minIndex]);
