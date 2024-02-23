@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+// 会超时
+// 思路差不多，需要优化
 public class SolutionOne {
     public int[] getOrder(int[][] tasks) {
         int time = 1;
@@ -15,7 +17,14 @@ public class SolutionOne {
         for (int i = 0; i < tasksLength; i++) {
             tasksData[i] = new int[]{tasks[i][0], tasks[i][1], i};
         }
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((o1, o2) -> tasks[o1][1] - tasks[o2][1]);
+        System.out.println(Arrays.deepToString(tasksData));
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((o1, o2) -> {
+            if(tasksData[o1][1] != tasksData[o2][1]){
+                return tasksData[o1][1] - tasksData[o2][1];
+            }else {
+                return tasksData[o1][2] - tasksData[o2][2];
+            }
+        });
         Arrays.sort(tasksData, (o1, o2) -> o1[0] - o2[0]);
         int enqueueIndex = 0;
         while (k < tasksLength) {

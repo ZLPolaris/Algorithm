@@ -2,7 +2,7 @@ package com.learn.LC264;
 
 public class SolutionTwo {
 }
-class Solution {
+class SolutionTwos {
     public int nthUglyNumber(int n) {
         int[] data = new int[n];
         data[0] = 1;
