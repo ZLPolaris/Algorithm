@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Main {
     public void qSort(int[] arr, int left, int right) {
+        
         if (left >= right) {
             return;
         }
